@@ -3,4 +3,6 @@
 
 ```
 git pwd
+git add
+git commit
 ```
