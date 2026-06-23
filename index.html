@@ -9,20 +9,45 @@
 </head>
 <body>
   <h1>Hey! Im learning git!</h1>
-  <p>Git is used by Pro Programmers to let them control their projects versions properly</p>
-  
+  <p>
+    Git is used by Pro Programmers to let them control their projects versions properly
+  </p>
+
   <hr>
   <h3>Some git commands for me that I learned!</h3>
-  <span class="bash">
-    git init <span class="bash-comment"># To start/initilaise a new project.</span>
-  
-    <br />
-    
-    git add . <span class="bash-comment"># This stages all the files and make them ready for the next commit</span>
-    
-    <br />
-    
-    git commit -m "The messege goes here" 
-  </span>
+  <section class="bash">
+    <span class="command">
+      git init <span class="bash-comment"># To start/initilaise a new project.</span>
+    </span>
+    <span class="command">
+      git add . <span class="bash-comment"># This stages all the files and make them ready for the next commit</span>
+    </span>
+    <span class="command">
+      git status <span class="bash-comment"># Shows what are staged to commit</span>
+    </span>
+    <span class="command">
+      git commit -m "The messege goes here" <span class="bash-comment"># -m is used to say the msg. helpful.</span>
+    </span>
+    <span class="command">
+      git log <span class="bash-comment"># Shows the commits in detail</span>
+    </span>
+    <span class="command">
+      git log --oneline <span class="bash-comment"># Show the commits shortly in a single line for each</span>
+    </span>
+    <span class="command">
+      git remote add origin main https://github/RupHasan/repo-name/ <span class="bash-comment"># Connects the project to github repo, making it ready to push or pull</span>
+    </span>
+    <span class="command">
+      git push -u origin main <span class="bash-comment"># The first push, makes it easier to push in future</span>
+    </span>
+    <span class="command">
+      git push <span class="bash-comment"># Default push</span>
+    </span>
+  </section>
+  <div style="
+    width: 200px;
+    height: 500px;
+    background: green;
+  "></div>
 </body>
 </html>

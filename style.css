@@ -1,10 +1,10 @@
-:root{
+:root {
   --bg-main: rgb(70,70,70);
   --bg-bash: black;
   --bash-comment: darkgrey;
 }
 /* note when i use it on mobile, it doesnt center the elements properly */
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: Monospace;
@@ -12,8 +12,8 @@
   text-align: center;
 }
 
-body{
-  width: 100vw;
+body {
+  min-width: 100vw;
   height: 100vh;
   background-color: var(--bg-main);
   color: azure;
@@ -22,8 +22,9 @@ body{
   align-items: center;
   flex-direction: column;
   gap: 15px;
+  overflow-y: scroll;
 }
-body p{
+body p {
   text-decoration: italic;
 }
 
@@ -32,17 +33,25 @@ hr {
 }
 .bash {
   width: 80vw;
+  height: auto;
   background: var(--bg-bash);
   padding: 10px;
   border: 2px solid black;
   border-radius: 7px;
-  color: lightgreen;
   overflow-x: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 5px;
+}
+.command {
+  color: lightgreen;
   text-align: start;
-  white-space: no;
+  white-space: nowrap;
 }
 
-.bash .bash-comment{
+.bash-comment {
   color: var(--bash-comment);
   text-align: start;
 }
@@ -52,9 +61,9 @@ hr {
 
 
 @media(max-width: 500px) {
-  .bash{
+  .bash {
     width: 95vw;
     padding: 10px;
     padding-left: 10px;
   }
-} 
+}
