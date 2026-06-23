@@ -1,13 +1,21 @@
+:root{
+  --bg-main: rgb(70,70,70);
+  --bg-bash: black;
+  --bash-comment: darkgrey;
+}
+/* note when i use it on mobile, it doesnt center the elements properly */
 *{
   margin: 0;
   padding: 0;
   font-family: Monospace;
   box-sizing: border-box;
+  text-align: center;
 }
+
 body{
   width: 100vw;
   height: 100vh;
-  background-color: rgb(40,40,40);
+  background-color: var(--bg-main);
   color: azure;
   display: flex;
   justify-content: center;
@@ -18,3 +26,35 @@ body{
 body p{
   text-decoration: italic;
 }
+
+hr {
+  width: 80vw;
+}
+.bash {
+  width: 80vw;
+  background: var(--bg-bash);
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 7px;
+  color: lightgreen;
+  overflow-x: scroll;
+  text-align: start;
+  white-space: no;
+}
+
+.bash .bash-comment{
+  color: var(--bash-comment);
+  text-align: start;
+}
+
+/* note fix the media query */
+/* note when used in phone, make the bash width take 95vw  */
+
+
+@media(max-width: 500px) {
+  .bash{
+    width: 95vw;
+    padding: 10px;
+    padding-left: 10px;
+  }
+} 
